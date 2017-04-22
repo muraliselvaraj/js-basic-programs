@@ -77,3 +77,21 @@ function merge_v2(a, b){
 var merged_array_2 = merge_v2(a, b);
 
 /********************************************************************/
+
+//Reverse a given array without using inbuilt function
+
+var input = [1,2,3,4,5];
+
+function reverse(input) {
+    var len = input.length, temp;
+    for (var i = 0; i < len/2; ++i) {
+        temp = input[i];
+        input[i] = input[len-1-i];
+        input[len-1-i] = temp;
+    }
+    return input;
+}
+
+var reversed_arr = reverse(input);
+
+/********************************************************************/
