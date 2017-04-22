@@ -13,3 +13,20 @@ function removeIdenticalStr(input){
 	return tempArr.join('');
 }
 var result = removeIdenticalStr(inputString);
+
+/********************************************************************/
+
+//$.each implemetation in javascript
+
+function each(opts, cb){
+	for(var i in opts){
+		cb(i,opts[i]);
+	}
+}
+
+each(['10','20'], function(a, v){
+	console.log('a == ', a);
+	console.log('v == ', v);
+});
+
+/********************************************************************/
