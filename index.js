@@ -167,5 +167,28 @@ var uniqueSortedArray = unsortedDuplicates.uniqueAndSort();
 
 /********************************************************************/
 
+// Get the highest occurance in the given array
 
+Array.prototype.getHighestOccurance = function() {
+	var unique = {};
+	var result, count = 1;
+	for (var i = 0; i < this.length; i++) {
+		if (unique.hasOwnProperty(this[i])) {
+			unique[this[i]]++;
+		} else {
+			unique[this[i]] = 1
+		}
+		if(unique[this[i]]>count){
+		    result = this[i]
+		    count = unique[this[i]]
+		}
+	}
+	return result
+};
+
+var inputs = [1,2,3,4,5,1,2,3,4,1,2,3,1,2,1,2,2,2,2];
+
+var output = inputs.getHighestOccurance();
+
+/********************************************************************/
 
