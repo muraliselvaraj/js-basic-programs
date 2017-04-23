@@ -95,3 +95,24 @@ function reverse(input) {
 var reversed_arr = reverse(input);
 
 /********************************************************************/
+
+//Check whether the given string containing unique characters or not
+
+function isUnique(s){
+    var chars = {};
+    for(var i=0;i<s.length;i++){
+        if (chars[s[i]]) {
+        	return false;
+        } else {
+        	chars[s[i]] = 1;
+        }
+    }
+    return true;
+}
+
+var result_1 = isUnique('tes'); // returns true
+var result_2 = isUnique('test'); // returns false
+
+/********************************************************************/
+
+
