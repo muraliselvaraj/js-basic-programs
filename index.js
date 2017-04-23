@@ -140,3 +140,32 @@ var finalResult = recursionTest(counter, a);
 
 /********************************************************************/
 
+//Make an array unique without using any inbuilt function and also sort them
+
+Array.prototype.uniqueAndSort = function() {
+    var unique = [];
+    for (var i = 0; i < this.length; i++) {
+        if (unique.indexOf(this[i]) == -1) {
+            unique.push(this[i]);
+        }
+    }
+    for (var j = 0; j < unique.length - 1; j++) {
+        for (var k = 0, swapping; k < unique.length - 1; k++) {
+          	if (unique[k] > unique[k + 1]) {
+	            swapping = unique[k + 1];
+	            unique[k + 1] = unique[k];
+	            unique[k] = swapping;
+            };
+        };
+    };
+    return unique;
+};
+
+var unsortedDuplicates = [1,1,0,1,3,0,1];
+
+var uniqueSortedArray = unsortedDuplicates.uniqueAndSort();
+
+/********************************************************************/
+
+
+
