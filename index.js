@@ -115,4 +115,28 @@ var result_2 = isUnique('test'); // returns false
 
 /********************************************************************/
 
+//Recursion example start
+var a = {1:{data: '1st'},2:{data: '2nd'},3:{data: '3rd'}};
+a[1] = a;
+a[2] = a;
+a[3] = a;
+var opts = [1,3,3,1,2,1,2,3];
+var counter = 0;
+function recursionTest(counter, result){
+	if (opts.length < 1) {
+		console.log('opts should not be empty');
+	} else {
+		var ans = result[opts[counter]];
+		counter++;
+		if(counter == (opts.length-1)){
+			return ans;
+		} else {
+			return recursionTest(counter, ans);
+		}
+	}
+}
+
+var finalResult = recursionTest(counter, a);
+
+/********************************************************************/
 
