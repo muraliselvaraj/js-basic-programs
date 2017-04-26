@@ -192,3 +192,22 @@ var output = inputs.getHighestOccurance();
 
 /********************************************************************/
 
+// Suffle the given array
+
+function shuffle(arr){
+   	var current_idx = arr.length;
+   	while(0 !== current_idx){
+		var random_idx = Math.floor(Math.random() * current_idx);
+    	current_idx -= 1;
+		var temp = arr[current_idx];
+    	arr[current_idx] = arr[random_idx];
+        arr[random_idx] = temp;
+	}
+	return arr;
+}
+
+var inputs = [1,2,3,4,5,6,7,8,9,10];
+
+var result = shuffle(inputs);
+
+/********************************************************************/
