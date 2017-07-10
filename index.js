@@ -1,5 +1,5 @@
 //1. Remove all adjacent duplicates in given string
-// afcbddbcgf -> afcf, Jaaavvvvvvvvvaaaaaaaaaaa -> Java
+// Jaaavvvvvvvvvaaaaaaaaaaa -> Java
 
 var inputString = "NooooooodddddddeeeeeeeJJJJJSSS";
 function removeIdenticalStr(input){
