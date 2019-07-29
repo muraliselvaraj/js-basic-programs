@@ -10,7 +10,7 @@ Ex.Input: [1,0,1,1,0,1] ==> 2
 
 let input = [1,0,1,1,0,1,1,1,1,0];
 
-const findMaxContinuesOnesCount = (arr) => {
+const findMaxConsecutiveOnesCount = (arr) => {
 	if (arr.length == 0) return false;
 	let temp_count = 0, max_count = 0;
 	let idx = 0;
@@ -28,5 +28,5 @@ const findMaxContinuesOnesCount = (arr) => {
 	return max_count
 }
 
-var max_ones_count = findMaxContinuesOnes(input);
+var max_ones_count = findMaxConsecutiveOnes(input);
 console.log("max_ones_count: ", max_ones_count)
